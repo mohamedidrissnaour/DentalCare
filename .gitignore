@@ -1,0 +1,7 @@
+node_modules/
+dist/
+release/
+app-data/
+*.db
+*.db.tmp
+identifiants-initiaux.txt

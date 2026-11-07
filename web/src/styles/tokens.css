@@ -1,0 +1,222 @@
+/* DentaCare - design tokens v4 « Poket »
+   Turquoise (actions, navigation), vert (patient en cours, réussite), blanc, gris, anthracite ; orange et jaune pour les alertes.
+   Thème clair par défaut ; thème sombre via [data-theme="dark"]. Aucune ressource externe. */
+
+:root {
+  /* Typographie */
+  --font-family: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+  --font-family-mono: "Cascadia Mono", "Consolas", ui-monospace, monospace;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --line-height-tight: 1.2;
+  --line-height-base: 1.45;
+
+  /* Espacements (grille 4 px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Dimensions */
+  --control-height-sm: 32px;
+  --control-height-md: 38px;
+  --sidebar-width: 256px;
+  --sidebar-width-collapsed: 72px;
+  --topbar-height: 60px;
+  --content-max-width: 1520px;
+
+  /* Rayons */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 999px;
+
+  /* Mouvement */
+  --duration-fast: 120ms;
+  --duration-base: 160ms;
+  --duration-slow: 220ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Neutres */
+  --color-neutral-50: #F8FAFC;
+  --color-neutral-100: #F1F5F9;
+  --color-neutral-200: #E2E8F0;
+  --color-neutral-300: #CBD5E1;
+  --color-neutral-400: #94A3B8;
+  --color-neutral-500: #64748B;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1E293B;
+  --color-neutral-900: #0F172A;
+
+  /* Orange Poket : alertes fortes (absent, en retard) */
+  --color-orange: #FF5E14;
+  --color-orange-soft: #FFEDE4;
+
+  /* Surfaces */
+  --color-bg: #F7F7F7;
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #FFFFFF;
+  --color-surface-sunken: #F2F4F5;
+  --color-overlay: rgba(34, 36, 41, 0.45);
+
+  /* Texte */
+  --color-text: #222429;
+  --color-text-secondary: #696969;
+  --color-text-tertiary: #9A9A9A;
+  --color-text-inverse: #FFFFFF;
+  --color-text-disabled: #CBD5E1;
+
+  /* Bordures */
+  --color-border: #E6E8EA;
+  --color-border-strong: #D3D6DA;
+  --color-border-subtle: #EFF1F2;
+
+  /* Accent : turquoise */
+  --color-accent: #14B1BB;
+  --color-accent-hover: #0F959E;
+  --color-accent-active: #0B7C84;
+  --color-accent-soft: #E4F6F7;
+  --color-accent-soft-border: #B6E5E8;
+  --color-accent-text: #0B7C84;
+  --color-focus-ring: #14B1BB;
+  --color-header-from: #14B1BB;
+  --color-header-to: #21CDC0;
+
+  /* Second accent : vert santé (logo, docteur principal, patient en cours) */
+  --color-brass: #1BAE7E;
+  --color-brass-soft: #E2F6EE;
+  --color-brass-border: #B3E6D1;
+  --color-brass-text: #127A57;
+
+  /* Sémantiques */
+  --color-success: #1BAE7E;
+  --color-success-soft: #E2F6EE;
+  --color-success-text: #127A57;
+  --color-warning: #FCBF64;
+  --color-warning-soft: #FFF5E3;
+  --color-warning-text: #8A5A00;
+  --color-danger: #EA3747;
+  --color-danger-hover: #CC2636;
+  --color-danger-soft: #FDECEE;
+  --color-danger-text: #B0202F;
+  --color-info: #14B1BB;
+  --color-info-soft: #E4F6F7;
+  --color-info-text: #0B7C84;
+
+  /* Barre latérale : blanche */
+  --color-sidebar-bg: #FFFFFF;
+  --color-sidebar-border: #E6E8EA;
+  --color-sidebar-text: #222429;
+  --color-sidebar-muted: #9A9A9A;
+  --color-sidebar-active-bg: #E4F6F7;
+  --color-sidebar-active-text: #0B7C84;
+  --color-sidebar-hover-bg: #F2F4F5;
+
+  /* Odontogramme */
+  --color-tooth-saine: #FFFFFF;
+  --color-tooth-outline: #64748B;
+
+  /* Graphiques */
+  --color-chart-1: #14B1BB;
+  --color-chart-2: #21CDC0;
+  --color-chart-3: #A5E4E8;
+  --color-chart-4: #D3D6DA;
+  --color-chart-grid: #EFF1F2;
+
+  /* Ombres */
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 2px 8px rgba(20, 177, 187, 0.05);
+  --shadow-floating: 0 12px 32px rgba(15, 23, 42, 0.14), 0 2px 6px rgba(15, 23, 42, 0.06);
+  --shadow-focus: 0 0 0 2px var(--color-surface), 0 0 0 4px var(--color-focus-ring);
+}
+
+[data-theme="dark"] {
+  --color-neutral-50: #0F172A;
+  --color-neutral-100: #152036;
+  --color-neutral-200: #1E2A42;
+  --color-neutral-300: #2A3852;
+  --color-neutral-400: #475569;
+  --color-neutral-500: #7C8BA3;
+  --color-neutral-600: #A3B0C4;
+  --color-neutral-700: #CBD5E1;
+  --color-neutral-800: #E2E8F0;
+  --color-neutral-900: #F1F5F9;
+
+  --color-bg: #0D1526;
+  --color-surface: #131D33;
+  --color-surface-raised: #182540;
+  --color-surface-sunken: #0F182B;
+  --color-overlay: rgba(2, 6, 14, 0.62);
+
+  --color-text: #E6ECF5;
+  --color-text-secondary: #A3B0C4;
+  --color-text-tertiary: #6B7A93;
+  --color-text-inverse: #0D1526;
+  --color-text-disabled: #3A4862;
+
+  --color-border: #22304B;
+  --color-border-strong: #2E3F5F;
+  --color-border-subtle: #1B2740;
+
+  --color-accent: #2CC6CF;
+  --color-accent-hover: #4FD3DA;
+  --color-accent-active: #7ADFE4;
+  --color-accent-soft: #123A3E;
+  --color-accent-soft-border: #1C5A5F;
+  --color-accent-text: #8FE6EA;
+  --color-focus-ring: #4FD3DA;
+  --color-header-from: #0E3B40;
+  --color-header-to: #125055;
+
+  --color-brass: #3CC795;
+  --color-brass-soft: #143A2E;
+  --color-brass-border: #1F5A45;
+  --color-brass-text: #8FE2C2;
+
+  --color-success: #3CC795;
+  --color-success-soft: #143A2E;
+  --color-success-text: #8FE2C2;
+  --color-warning: #FCBF64;
+  --color-warning-soft: #3A2E12;
+  --color-warning-text: #F6D38C;
+  --color-danger: #F05B69;
+  --color-danger-hover: #F58A8A;
+  --color-danger-soft: #3D1D22;
+  --color-danger-text: #F7B2B2;
+  --color-info: #2CC6CF;
+  --color-info-soft: #123A3E;
+  --color-info-text: #8FE6EA;
+
+  --color-sidebar-bg: #131D33;
+  --color-sidebar-border: #22304B;
+  --color-sidebar-text: #CBD5E1;
+  --color-sidebar-muted: #6B7A93;
+  --color-sidebar-active-bg: #123A3E;
+  --color-sidebar-active-text: #E6ECF5;
+  --color-sidebar-hover-bg: #182540;
+
+  --color-tooth-saine: #182540;
+  --color-tooth-outline: #A3B0C4;
+
+  --color-chart-1: #2CC6CF;
+  --color-chart-2: #3CC795;
+  --color-chart-3: #1C5A5F;
+  --color-chart-4: #2E3F5F;
+  --color-chart-grid: #1B2740;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-floating: 0 12px 32px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0ms; --duration-base: 0ms; --duration-slow: 0ms; }
+}
